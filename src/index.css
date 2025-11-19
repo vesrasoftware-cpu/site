@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Prevent horizontal scrolling on mobile */
+html, body, #root {
+  overflow-x: hidden;
+}
+
+/* Make touch targets accessible */
+button {
+  min-height: 44px;
+  min-width: 44px;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer utilities {
+  .wp-card {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+  }
+  
+  .wp-card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .wp-card-hover:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+  }
+  
+  .wp-section-light {
+    background: #f9fafb;
+  }
+  
+  .wp-section-dark {
+    background: #1f2937;
+    color: #ffffff;
+  }
+  
+  .wp-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .wp-gradient-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Hero animations */
+@keyframes heroZoomOut {
+  0% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glideUp {
+  0% { transform: translateY(18px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.hero-bg {
+  transform-origin: center;
+  will-change: transform;
+  animation: heroZoomOut 12s ease-out forwards;
+}
+
+.glide-up {
+  transform: translateY(18px);
+  opacity: 0;
+  animation: glideUp 0.9s cubic-bezier(.22,.9,.32,1) 0.2s forwards;
+}
