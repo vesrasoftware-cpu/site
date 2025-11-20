@@ -51,7 +51,10 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
             ))}
 
             {/* CTA Button */}
-            <button className="ml-4 px-6 py-2 min-h-[44px] bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition-colors">
+            <button
+              className="ml-4 px-6 py-2 min-h-[44px] bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition-colors"
+              onClick={() => handleNavClick('contact')}
+            >
               Get Started
             </button>
           </div>
@@ -82,7 +85,10 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 {item.label}
               </button>
             ))}
-            <button className="w-full mt-3 px-4 py-3 min-h-[44px] bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition-colors">
+            <button
+              className="w-full mt-3 px-4 py-3 min-h-[44px] bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition-colors"
+              onClick={() => handleNavClick('contact')}
+            >
               Get Started
             </button>
           </div>

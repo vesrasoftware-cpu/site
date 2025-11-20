@@ -13,7 +13,11 @@ import {
   Rocket
 } from "lucide-react";
 
-function ServicesPage() {
+interface ServicesPageProps {
+  setCurrentPage: (page: string) => void;
+}
+
+function ServicesPage({ setCurrentPage }: ServicesPageProps) {
   const services = [
     { icon: Code2, title: "Custom Software Development", img: "/cd.jpeg", description: "Tailored software solutions designed to meet your unique business requirements with scalable, maintainable code.", features: ["Full-stack Development", "Enterprise Solutions", "Legacy System Modernization"] },
     { icon: Smartphone, title: "Mobile App Development", img: "/md.jpeg", description: "Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android.", features: ["iOS & Android Apps", "React Native", "Flutter Development"] },
@@ -51,7 +55,7 @@ function ServicesPage() {
           </div>
           <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 sm:mb-8 text-white">
             Our{' '}
-            <span className="bg-gradient-to-r from-neon-cyan via-neon-blue to-neon-purple bg-clip-text text-transparent">Services</span>
+            <span className="bg-gradient-to-r from-neon-cyan via-neon-blue to-neon-purple bg-clip-text text-red-600">Services</span>
           </h1>
           <p className="text-base xs:text-lg sm:text-xl text-gray-300 max-w-xl sm:max-w-3xl mx-auto">
             High-quality software services powered by innovation and world-class execution.
@@ -110,7 +114,10 @@ function ServicesPage() {
             <p className="text-gray-300 text-base xs:text-lg md:text-2xl mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed text-center">
               Let’s collaborate and build something extraordinary together.
             </p>
-            <button className="px-8 xs:px-10 sm:px-14 py-4 xs:py-5 bg-blue-600 hover:bg-blue-700 rounded-2xl font-bold text-base xs:text-lg shadow-lg hover:scale-110 transition-all duration-300 text-white min-h-[44px] min-w-[44px] focus:outline-none focus:ring-2 focus:ring-neon-cyan">
+            <button
+              className="px-8 xs:px-10 sm:px-14 py-4 xs:py-5 bg-blue-600 hover:bg-blue-700 rounded-2xl font-bold text-base xs:text-lg shadow-lg hover:scale-110 transition-all duration-300 text-white min-h-[44px] min-w-[44px] focus:outline-none focus:ring-2 focus:ring-neon-cyan"
+              onClick={() => setCurrentPage('contact')}
+            >
               Get in Touch
             </button>
           </div>

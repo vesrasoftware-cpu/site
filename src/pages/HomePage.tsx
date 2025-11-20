@@ -1,6 +1,10 @@
 import { ArrowRight, Code2, Sparkles, Zap, Globe, Shield, Cpu, Rocket, Brain, Database, Cloud, Lock, TrendingUp } from 'lucide-react';
 
-function HomePage() {
+interface HomePageProps {
+  setCurrentPage: (page: string) => void;
+}
+
+function HomePage({ setCurrentPage }: HomePageProps) {
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -31,7 +35,10 @@ function HomePage() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10 sm:mb-16">
-            <button className="group px-8 sm:px-10 py-4 min-w-[44px] min-h-[44px] wp-gradient-primary text-white text-base sm:text-lg font-bold hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-lg rounded-lg sm:rounded-xl">
+            <button
+              className="group px-8 sm:px-10 py-4 min-w-[44px] min-h-[44px] wp-gradient-primary text-white text-base sm:text-lg font-bold hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-lg rounded-lg sm:rounded-xl"
+              onClick={() => setCurrentPage('contact')}
+            >
               <span>Get Started</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
@@ -754,7 +761,10 @@ function HomePage() {
             <p className="text-gray-600 text-xl mb-8 max-w-2xl mx-auto">
               Let's discuss how we can help you achieve your goals with our innovative solutions and expert team
             </p>
-            <button className="px-12 py-5 wp-gradient-primary text-white font-bold text-lg hover:opacity-90 transition-all inline-flex items-center gap-3 shadow-lg">
+            <button
+              className="px-12 py-5 wp-gradient-primary text-white font-bold text-lg hover:opacity-90 transition-all inline-flex items-center gap-3 shadow-lg"
+              onClick={() => setCurrentPage('contact')}
+            >
               <span>Contact Us Today</span>
               <ArrowRight size={20} />
             </button>
