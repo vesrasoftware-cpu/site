@@ -14,113 +14,109 @@ import {
 } from "lucide-react";
 
 function ServicesPage() {
-  const services = [
-    {
-      icon: Code2,
-      title: "Custom Software Development",
-      description:
-        "Tailored software solutions designed to meet your unique business requirements with scalable, maintainable code.",
-      features: [
-        "Full-stack Development",
-        "Enterprise Solutions",
-        "Legacy System Modernization",
-      ],
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile App Development",
-      description:
-        "Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android.",
-      features: ["iOS & Android Apps", "React Native", "Flutter Development"],
-    },
-    {
-      icon: Globe,
-      title: "Web Development",
-      description:
-        "Modern, responsive web applications built with cutting-edge frameworks and best practices.",
-      features: ["React & Vue.js", "Progressive Web Apps", "E-commerce Platforms"],
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description:
-        "Scalable cloud infrastructure and migration services to optimize your operations and reduce costs.",
-      features: ["AWS & Azure", "Cloud Migration", "DevOps & CI/CD"],
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Design",
-      description:
-        "Beautiful, intuitive interfaces that prioritize user experience and drive engagement.",
-      features: ["User Research", "Wireframing & Prototyping", "Design Systems"],
-    },
-    {
-      icon: Database,
-      title: "Database Solutions",
-      description:
-        "Robust database architecture and management for optimal data storage and retrieval.",
-      features: ["SQL & NoSQL", "Database Optimization", "Data Migration"],
-    },
-    {
-      icon: Cpu,
-      title: "AI & Machine Learning",
-      description:
-        "Intelligent solutions powered by artificial intelligence and machine learning algorithms.",
-      features: [
-        "Predictive Analytics",
-        "Natural Language Processing",
-        "Computer Vision",
-      ],
-    },
-    {
-      icon: Lock,
-      title: "Cybersecurity",
-      description:
-        "Comprehensive security solutions to protect your digital assets and ensure compliance.",
-      features: [
-        "Security Audits",
-        "Penetration Testing",
-        "Compliance Management",
-      ],
-    },
-    {
-      icon: ShoppingCart,
-      title: "E-commerce Solutions",
-      description:
-        "Complete e-commerce platforms with payment integration, inventory management, and analytics.",
-      features: [
-        "Custom Storefronts",
-        "Payment Gateway Integration",
-        "Order Management",
-      ],
-    },
-    {
-      icon: LineChart,
-      title: "Business Intelligence",
-      description:
-        "Data-driven insights and analytics to help you make informed business decisions.",
-      features: ["Data Visualization", "Custom Dashboards", "Reporting Solutions"],
-    },
-    {
-      icon: Blocks,
-      title: "API Development",
-      description:
-        "RESTful and GraphQL APIs that enable seamless integration and communication.",
-      features: ["REST & GraphQL", "API Documentation", "Third-party Integrations"],
-    },
-    {
-      icon: Rocket,
-      title: "Digital Transformation",
-      description:
-        "End-to-end digital transformation strategies to modernize your business operations.",
-      features: ["Strategy Consulting", "Process Automation", "Change Management"],
-    },
-  ];
+const services = [
+  {
+    icon: Code2,
+    title: "Custom Software Development",
+    img: "/cd.jpeg",
+    description:
+      "Tailored software solutions designed to meet your unique business requirements with scalable, maintainable code.",
+    features: ["Full-stack Development", "Enterprise Solutions", "Legacy System Modernization"],
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile App Development",
+    img: "/md.jpeg",
+    description:
+      "Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android.",
+    features: ["iOS & Android Apps", "React Native", "Flutter Development"],
+  },
+  {
+    icon: Globe,
+    title: "Web Development",
+    img: "/wd.jpeg",
+    description:
+      "Modern, responsive web applications built with cutting-edge frameworks and best practices.",
+    features: ["React & Vue.js", "Progressive Web Apps", "E-commerce Platforms"],
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Solutions",
+    img: "/cs.jpeg",
+    description:
+      "Scalable cloud infrastructure and migration services to optimize your operations and reduce costs.",
+    features: ["AWS & Azure", "Cloud Migration", "DevOps & CI/CD"],
+  },
+  {
+    icon: Palette,
+    title: "UI/UX Design",
+    img: "/ui.jpeg",
+    description:
+      "Beautiful, intuitive interfaces that prioritize user experience and drive engagement.",
+    features: ["User Research", "Wireframing & Prototyping", "Design Systems"],
+  },
+  {
+    icon: Database,
+    title: "Database Solutions",
+    img: "/db.jpeg",
+    description:
+      "Robust database architecture and management for optimal data storage and retrieval.",
+    features: ["SQL & NoSQL", "Database Optimization", "Data Migration"],
+  },
+  {
+    icon: Cpu,
+    title: "AI & Machine Learning",
+    img: "/ai.jpeg",
+    description:
+      "Intelligent solutions powered by artificial intelligence and machine learning algorithms.",
+    features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision"],
+  },
+  {
+    icon: Lock,
+    title: "Cybersecurity",
+    img: "/c.jpeg",
+    description:
+      "Comprehensive security solutions to protect your digital assets and ensure compliance.",
+    features: ["Security Audits", "Penetration Testing", "Compliance Management"],
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-commerce Solutions",
+    img: "/e.jpeg",
+    description:
+      "Complete e-commerce platforms with payment integration, inventory management, and analytics.",
+    features: ["Custom Storefronts", "Payment Gateway Integration", "Order Management"],
+  },
+  {
+    icon: LineChart,
+    title: "Business Intelligence",
+    img: "/bi.jpeg",
+    description:
+      "Data-driven insights and analytics to help you make informed business decisions.",
+    features: ["Data Visualization", "Custom Dashboards", "Reporting Solutions"],
+  },
+  {
+    icon: Blocks,
+    title: "API Development",
+    img: "/a.jpeg",
+    description:
+      "RESTful and GraphQL APIs that enable seamless integration and communication.",
+    features: ["REST & GraphQL", "API Documentation", "Third-party Integrations"],
+  },
+  {
+    icon: Rocket,
+    title: "Digital Transformation",
+    img: "/d.jpeg",
+    description:
+      "End-to-end digital transformation strategies to modernize your business operations.",
+    features: ["Strategy Consulting", "Process Automation", "Change Management"],
+  },
+];
 
   return (
     <div className="pt-16">
 
-      {/* ------------------ HERO SECTION (unchanged) ------------------ */}
+      {/* ---------------- HERO ---------------- */}
       <section
         className="min-h-[70vh] flex items-center justify-center px-6 relative overflow-hidden"
         style={{
@@ -129,155 +125,131 @@ function ServicesPage() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute top-20 right-10 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl animate-float"></div>
-          <div
-            className="absolute bottom-20 left-10 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "2s" }}
-          ></div>
-        </div>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute top-20 right-10 w-96 h-96 bg-neon-purple/10 blur-3xl rounded-full animate-float"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-neon-blue/10 blur-3xl rounded-full animate-float"></div>
 
-        <div className="max-w-5xl mx-auto text-center relative z-10">
+        <div className="max-w-5xl mx-auto text-center z-10">
           <div className="inline-block mb-8 px-6 py-3 glass rounded-full border border-neon-purple/30">
             <span className="text-sm font-medium text-neon-purple">✦ What We Offer</span>
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-extrabold mb-8 text-white">
+          <h1 className="text-7xl font-extrabold mb-8 text-white">
             Our{" "}
-            <span className="bg-gradient-to-r from-neon-cyan via-neon-blue to-neon-purple bg-clip-text text-red-600">
+            <span className="bg-gradient-to-r from-neon-cyan via-neon-blue to-neon-purple bg-clip-text text-red-600 ">
               Services
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto font-light">
-            Comprehensive software solutions tailored to drive your business forward with{" "}
-            <span className="text-white font-semibold">cutting-edge technology</span> and expert execution.
+
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            High-quality software services powered by innovation and world-class execution.
           </p>
         </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neon-purple to-transparent"></div>
       </section>
 
-      {/* ------------------ SERVICES GRID (New About-style) ------------------ */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 bg-gradient-to-b from-black via-gray-900 to-black relative">
-        <div className="max-w-7xl mx-auto z-10 relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div
-                  key={index}
-                  className="group relative bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10 hover:border-neon-cyan/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(0,255,255,0.2)]"
-                >
-                  <div className="w-20 h-20 bg-gradient-to-br from-neon-cyan to-neon-purple rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-all duration-500">
-                    <Icon size={40} className="text-white" />
+      {/* ---------------- GRID ---------------- */}
+      <section className="py-28 px-6 bg-black">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {services.map((service, i) => {
+            const Icon = service.icon;
+
+            return (
+              <div
+                key={i}
+                className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl overflow-hidden hover:border-neon-cyan/30 hover:-translate-y-2 transition-all duration-300"
+              >
+                <div className="h-48 w-full overflow-hidden bg-black/20 flex items-center justify-center">
+                  <img src={service.img} alt={service.title} className="h-40 object-contain opacity-90" />
+                </div>
+
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <Icon className="text-neon-blue" size={26} />
+                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
 
-                  <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>
-
-                  <ul className="space-y-3">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300 text-sm">
-                        <div className="w-2 h-2 bg-gradient-to-r from-neon-cyan to-neon-blue rounded-full mr-3"></div>
-                        {feature}
+                  <ul className="space-y-2">
+                    {service.features.map((f, idx) => (
+                      <li key={idx} className="flex items-center text-gray-400">
+                        <div className="w-2 h-2 bg-neon-blue rounded-full mr-3" />
+                        {f}
                       </li>
                     ))}
                   </ul>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ------------------ DEVELOPMENT PROCESS (Upgraded) ------------------ */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 relative overflow-hidden bg-black">
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-4 px-4 py-2 glass rounded-full">
-              <span className="text-sm font-medium text-neon-blue">⚡ Our Approach</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Development{" "}
-              <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
-                Process
-              </span>
-            </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-              We follow a proven methodology to ensure successful project delivery every time.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Discovery",
-                description: "Understanding your needs and defining project scope",
-                icon: "🔍",
-              },
-              {
-                step: "02",
-                title: "Design",
-                description: "Creating intuitive designs and user experiences",
-                icon: "🎨",
-              },
-              {
-                step: "03",
-                title: "Development",
-                description: "Building robust solutions with clean code",
-                icon: "⚙️",
-              },
-              {
-                step: "04",
-                title: "Delivery",
-                description: "Testing, deployment, and ongoing support",
-                icon: "🚀",
-              },
-            ].map((phase, index) => (
-              <div key={index} className="relative group">
-                <div className="bg-white/5 backdrop-blur-xl p-10 rounded-3xl border border-white/10 hover:border-neon-cyan/40 hover:scale-105 transition-all duration-500">
-                  <div className="text-6xl mb-4">{phase.icon}</div>
-                  <div className="text-5xl font-black bg-gradient-to-br from-neon-cyan to-neon-purple bg-clip-text text-transparent opacity-20 group-hover:opacity-100 transition-all duration-500 mb-4">
-                    {phase.step}
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">{phase.title}</h3>
-                  <p className="text-gray-300">{phase.description}</p>
-                </div>
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-neon-cyan to-neon-purple"></div>
-                )}
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* ------------------ CTA (Upgraded) ------------------ */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 relative bg-black">
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="bg-white/5 backdrop-blur-xl rounded-[3rem] p-16 border border-white/20 text-center relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/10 via-neon-purple/10 to-neon-blue/10 rounded-[3rem]"></div>
+      {/* ---------------- PROCESS ---------------- */}
+      <section className="py-28 px-6 bg-black relative">
+        <div className="max-w-6xl mx-auto text-center mb-20">
+          <span className="px-4 py-2 glass border border-white/20 rounded-full text-neon-blue">
+            ⚡ Our Approach
+          </span>
+          <h2 className="text-5xl font-bold text-white mt-6">
+            Development{" "}
+            <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
+              Process
+            </span>
+          </h2>
+        </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Ready to Start <br />
-              <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
-                Your Project?
-              </span>
-            </h2>
-
-            <p className="text-gray-300 text-xl mb-10 max-w-2xl mx-auto">
-              Let's discuss how our services can help you achieve your business goals.
-            </p>
-
-            <button className="px-12 py-6 bg-gradient-to-r from-neon-cyan to-neon-blue rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-xl">
-              Get in Touch
-            </button>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          {[
+            { step: "01", title: "Discovery", icon: "🔍", desc: "Understanding goals & scope" },
+            { step: "02", title: "Design", icon: "🎨", desc: "User-focused experience design" },
+            { step: "03", title: "Development", icon: "⚙️", desc: "Building reliable solutions" },
+            { step: "04", title: "Delivery", icon: "🚀", desc: "Deployment & support" },
+          ].map((p, i) => (
+            <div
+              key={i}
+              className="bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-xl hover:border-neon-cyan/40 hover:scale-105 transition-all duration-500"
+            >
+              <div className="text-5xl mb-4">{p.icon}</div>
+              <div className="text-5xl font-black bg-gradient-to-br from-neon-cyan to-neon-purple bg-clip-text text-transparent opacity-20 mb-4">
+                {p.step}
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">{p.title}</h3>
+              <p className="text-gray-300">{p.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
+
+      {/* ---------------- CTA ---------------- */}
+<section className="py-32 px-6 bg-black relative overflow-hidden">
+  {/* Floating gradient orbs */}
+  <div className="absolute -top-20 -left-20 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-float"></div>
+  <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl animate-float animation-delay-2"></div>
+
+  <div className="max-w-4xl mx-auto relative z-10 text-center">
+    <div className="rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-xl p-16 shadow-[0_0_60px_-10px_rgba(0,255,255,0.25)] hover:shadow-[0_0_80px_-10px_rgba(140,0,255,0.3)] transition-all duration-500">
+      
+      <h2 className="text-5xl md:text-6xl font-extrabold text-white leading-tight text-center">
+  <span className="block">Ready to</span>
+  <span className="block bg-gradient-to-r from-neon-cyan via-neon-blue to-neon-purple bg-clip-text text-transparent">
+    Start Your Project?
+  </span>
+</h2>
+
+
+      <p className="text-gray-300 text-xl md:text-2xl mb-12 max-w-2xl mx-auto leading-relaxed text-center">
+        Let’s collaborate and build something extraordinary together.
+      </p>
+
+      <button className="px-14 py-5 bg-blue-600 hover:bg-blue-700 rounded-2xl font-bold text-lg shadow-lg hover:scale-110 transition-all duration-300 text-white">
+        Get in Touch
+      </button>
+    </div>
+  </div>
+</section>
+
+
     </div>
   );
 }

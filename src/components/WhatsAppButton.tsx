@@ -13,7 +13,7 @@ function WhatsAppButton() {
       className="fixed bottom-6 right-6 z-50 group"
       aria-label="Contact us on WhatsApp"
     >
-      <div className="bg-green-500 p-4 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+      <div className="wp-gradient-accent p-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
         <MessageCircle size={28} className="text-white" />
       </div>
       

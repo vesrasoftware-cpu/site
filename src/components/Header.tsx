@@ -23,13 +23,13 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900 border-b border-gray-800 shadow-md">
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-2 text-2xl font-bold text-gradient hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 text-2xl font-bold text-white hover:text-primary-500 transition-colors"
           >
             VESRA
           </button>
@@ -40,25 +40,25 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`px-4 py-2 min-h-[44px] text-sm font-semibold transition-all ${
+                className={`px-4 py-2 min-h-[44px] text-sm font-semibold rounded-md transition-all ${
                   currentPage === item.id
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-white bg-primary-600'
+                    : 'text-gray-300 hover:text-white hover:bg-gray-800'
                 }`}
               >
                 {item.label}
               </button>
             ))}
-            
+
             {/* CTA Button */}
-            <button className="ml-4 px-6 py-2 min-h-[44px] wp-gradient-primary text-white text-sm font-semibold hover:opacity-90 transition-opacity">
+            <button className="ml-4 px-6 py-2 min-h-[44px] bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition-colors">
               Get Started
             </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 p-2 rounded-md"
+            className="md:hidden text-gray-300 p-2 rounded-md hover:text-white transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation"
           >
@@ -68,21 +68,21 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-1 border-t border-gray-200 pt-4">
+          <div className="md:hidden mt-4 pb-4 space-y-1 border-t border-gray-800 pt-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`block w-full text-left px-4 py-3 min-h-[44px] text-sm font-semibold ${
+                className={`block w-full text-left px-4 py-3 min-h-[44px] text-sm font-semibold rounded-md transition-all ${
                   currentPage === item.id
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-700 hover:bg-gray-50'
+                    ? 'text-white bg-primary-600'
+                    : 'text-gray-300 hover:text-white hover:bg-gray-800'
                 }`}
               >
                 {item.label}
               </button>
             ))}
-            <button className="w-full mt-3 px-4 py-3 min-h-[44px] wp-gradient-primary text-white text-sm font-semibold">
+            <button className="w-full mt-3 px-4 py-3 min-h-[44px] bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition-colors">
               Get Started
             </button>
           </div>

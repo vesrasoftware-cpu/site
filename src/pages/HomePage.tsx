@@ -5,16 +5,11 @@ function HomePage() {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-        {/* Background layer: animated zoom-out */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center transform scale-105 hero-bg"
-            style={{ backgroundImage: "url('/home.jpeg')" }}
-          />
-        </div>
+        {/* Background layer: sharp, no blur */}
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/hh.jpeg')" }} />
 
-        {/* Dark overlay for legibility */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Dark overlay for legibility, less opacity for clarity */}
+        <div className="absolute inset-0 bg-black/20" />
 
         {/* Content: glide-up animation */}
         <div className="max-w-6xl mx-auto text-center relative z-10 py-20 glide-up">
@@ -49,11 +44,25 @@ function HomePage() {
               { number: '99.9%', label: 'Uptime' },
               { number: '24/7', label: 'Support' }
             ].map((stat, idx) => (
-              <div key={idx} className="wp-card wp-card-hover p-6 bg-white">
-                <div className="text-4xl font-black text-gradient mb-2">
-                  {stat.number}
+              <div key={idx} className="wp-card wp-card-hover bg-white">
+                <div className="wp-card-img">
+                  <img
+                    src={
+                      idx === 0
+                        ? 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80'
+                        : idx === 1
+                        ? 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80'
+                        : 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80'
+                    }
+                    alt={stat.label}
+                  />
                 </div>
-                <div className="text-gray-600 text-sm font-medium">{stat.label}</div>
+                <div className="p-6">
+                  <div className="text-4xl font-black text-gradient mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 text-sm font-medium">{stat.label}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -61,7 +70,7 @@ function HomePage() {
       </section>
 
       {/* Features Section - Expanded */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 bg-white">
+      <section className="py-20 sm:py-24 md:py-32 px-6 wp-section-light">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="inline-block mb-4 px-4 py-2 bg-primary-100 border border-primary-200">
@@ -110,8 +119,8 @@ function HomePage() {
           <div className="mb-20">
             <div className="wp-card p-10 bg-white">
               <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-green-50 flex items-center justify-center flex-shrink-0">
-                  <Shield size={32} className="text-green-600" />
+                <div className="w-16 h-16 bg-primary-50 flex items-center justify-center flex-shrink-0">
+                  <Shield size={32} className="text-primary-600" />
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-3">Secure & Reliable</h3>
@@ -121,15 +130,15 @@ function HomePage() {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-green-600 pl-6">
+                <div className="border-l-4 border-primary-600 pl-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">99.9% Uptime SLA</h4>
                   <p className="text-gray-600">Guaranteed availability with redundant systems and automated failover mechanisms.</p>
                 </div>
-                <div className="border-l-4 border-green-600 pl-6">
+                <div className="border-l-4 border-primary-600 pl-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">Data Encryption</h4>
                   <p className="text-gray-600">End-to-end encryption for data at rest and in transit using industry-standard protocols.</p>
                 </div>
-                <div className="border-l-4 border-green-600 pl-6">
+                <div className="border-l-4 border-primary-600 pl-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">Regular Security Audits</h4>
                   <p className="text-gray-600">Continuous security assessments and penetration testing to identify vulnerabilities.</p>
                 </div>
@@ -375,8 +384,8 @@ function HomePage() {
           <div className="mb-20">
             <div className="wp-card p-10 bg-white">
               <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-green-50 flex items-center justify-center flex-shrink-0">
-                  <Rocket size={32} className="text-green-600" />
+                <div className="w-16 h-16 bg-primary-50 flex items-center justify-center flex-shrink-0">
+                  <Rocket size={32} className="text-primary-600" />
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-3">DevOps & CI/CD</h3>
@@ -386,15 +395,15 @@ function HomePage() {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-green-600 pl-6">
+                <div className="border-l-4 border-primary-600 pl-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">Automated Pipelines</h4>
                   <p className="text-gray-600">Jenkins, GitLab CI, and GitHub Actions for automated testing and deployment.</p>
                 </div>
-                <div className="border-l-4 border-green-600 pl-6">
+                <div className="border-l-4 border-primary-600 pl-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">Infrastructure as Code</h4>
                   <p className="text-gray-600">Terraform and Ansible for reproducible and version-controlled infrastructure.</p>
                 </div>
-                <div className="border-l-4 border-green-600 pl-6">
+                <div className="border-l-4 border-primary-600 pl-6">
                   <h4 className="text-lg font-bold text-gray-900 mb-2">Monitoring & Logging</h4>
                   <p className="text-gray-600">Comprehensive observability with Prometheus, Grafana, and ELK stack.</p>
                 </div>
@@ -529,7 +538,7 @@ function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 bg-white">
+      <section className="py-20 sm:py-24 md:py-32 px-6 wp-section-light">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="inline-block mb-4 px-4 py-2 bg-primary-100 border border-primary-200">
@@ -605,34 +614,40 @@ function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="wp-card p-8 bg-white text-center">
-                <div className="w-16 h-16 bg-green-50 flex items-center justify-center mx-auto mb-4">
-                  <Rocket size={32} className="text-green-600" />
+              <div className="wp-card bg-white text-center">
+                <div className="wp-card-img">
+                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="fast-time" />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Fast Time to Market</h4>
-                <p className="text-gray-600">
-                  Our agile approach and experienced team ensure your product reaches the market quickly, giving you a competitive advantage and faster ROI.
-                </p>
+                <div className="p-8">
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">Fast Time to Market</h4>
+                  <p className="text-gray-600">
+                    Our agile approach and experienced team ensure your product reaches the market quickly, giving you a competitive advantage and faster ROI.
+                  </p>
+                </div>
               </div>
 
-              <div className="wp-card p-8 bg-white text-center">
-                <div className="w-16 h-16 bg-blue-50 flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp size={32} className="text-blue-600" />
+              <div className="wp-card bg-white text-center">
+                <div className="wp-card-img">
+                  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="scalable-growth" />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Scalable Growth</h4>
-                <p className="text-gray-600">
-                  Build on a foundation designed for growth. Our solutions scale seamlessly as your business expands, eliminating costly redesigns later.
-                </p>
+                <div className="p-8">
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">Scalable Growth</h4>
+                  <p className="text-gray-600">
+                    Build on a foundation designed for growth. Our solutions scale seamlessly as your business expands, eliminating costly redesigns later.
+                  </p>
+                </div>
               </div>
 
-              <div className="wp-card p-8 bg-white text-center">
-                <div className="w-16 h-16 bg-purple-50 flex items-center justify-center mx-auto mb-4">
-                  <Shield size={32} className="text-purple-600" />
+              <div className="wp-card bg-white text-center">
+                <div className="wp-card-img">
+                  <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80" alt="risk-mitigation" />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Risk Mitigation</h4>
-                <p className="text-gray-600">
-                  Proven methodologies, comprehensive testing, and ongoing support minimize project risks and ensure successful delivery.
-                </p>
+                <div className="p-8">
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">Risk Mitigation</h4>
+                  <p className="text-gray-600">
+                    Proven methodologies, comprehensive testing, and ongoing support minimize project risks and ensure successful delivery.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
