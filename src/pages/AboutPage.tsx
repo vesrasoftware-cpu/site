@@ -5,25 +5,25 @@ function AboutPage() {
     <div className="pt-16 bg-[#0A0A0A]">
       {/* Hero Section */}
       <section
-        className="min-h-[70vh] flex items-center justify-center px-6 relative overflow-hidden"
+        className="min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 md:px-8 relative overflow-hidden"
         style={{ backgroundImage: "url('/about.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-10 left-2 w-40 h-40 sm:w-96 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-10 right-2 w-40 h-40 sm:w-96 sm:h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
 
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="inline-block mb-8 px-6 py-3 rounded-full bg-white/10 border border-cyan-400/40 backdrop-blur">
-            <span className="text-sm font-medium text-cyan-400">✦ Our Story</span>
+        <div className="max-w-2xl sm:max-w-5xl mx-auto text-center relative z-10">
+          <div className="inline-block mb-4 sm:mb-8 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/10 border border-cyan-400/40 backdrop-blur">
+            <span className="text-xs sm:text-sm font-medium text-cyan-400">✦ Our Story</span>
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-extrabold mb-8 leading-tight text-white">
+          <h1 className="text-3xl sm:text-6xl md:text-7xl font-extrabold mb-4 sm:mb-8 leading-tight text-white">
             About{' '}
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
               Vesra
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto font-light">
+          <p className="text-base sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-xl sm:max-w-3xl mx-auto font-light">
             We are a <span className="text-white font-semibold">forward-thinking</span> software services company
             building innovative solutions for tomorrow.
           </p>
@@ -31,34 +31,34 @@ function AboutPage() {
       </section>
 
       {/* Story & Stats Section - DARK */}
-      <section className="py-24 px-6 relative bg-[#0D0D0D]">
+      <section className="py-10 sm:py-16 md:py-24 px-4 sm:px-6 md:px-8 relative bg-[#0D0D0D]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center mb-16 sm:mb-32">
             {/* Story */}
             <div>
-              <div className="inline-block mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur">
-                <span className="text-sm font-medium text-gray-300">✨ Building the Future</span>
+              <div className="inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur">
+                <span className="text-xs sm:text-sm font-medium text-gray-300">✨ Building the Future</span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-white">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-8 leading-tight text-white">
                 One Solution at a{' '}
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Time
                 </span>
               </h2>
 
-              <p className="text-gray-400 text-lg leading-relaxed mb-6">
+              <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                 Vesra was founded to transform the software world. Today, we deliver modern, scalable, and
                 high-performance solutions for businesses around the globe.
               </p>
 
-              <p className="text-gray-400 text-lg leading-relaxed">
+              <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
                 We prioritize innovation, security, and user-focused design to ensure each product creates meaningful impact.
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {[
                 { label: 'Projects Delivered', value: '150+' },
                 { label: 'Happy Clients', value: '100+' },
@@ -67,38 +67,38 @@ function AboutPage() {
               ].map((stat, index) => (
                 <div
                   key={index}
-                  className="rounded-3xl bg-[#111] border border-white/10 p-8 text-center hover:border-cyan-400/30 hover:-translate-y-2 transition-all"
+                  className="rounded-2xl sm:rounded-3xl bg-[#111] border border-white/10 p-4 sm:p-8 text-center hover:border-cyan-400/30 hover:-translate-y-2 transition-all"
                 >
-                  <div className="text-4xl font-black text-white mb-3">{stat.value}</div>
-                  <div className="text-sm text-gray-400 font-medium">{stat.label}</div>
+                  <div className="text-2xl sm:text-4xl font-black text-white mb-1 sm:mb-3">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-gray-400 font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Mission & Vision */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-32">
-            <div className="group rounded-[2.5rem] p-12 bg-[#111] hover:bg-[#151515] transition-all border border-white/10 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-32">
+            <div className="group rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-12 bg-[#111] hover:bg-[#151515] transition-all border border-white/10 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 sm:w-64 sm:h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
               <div className="relative z-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mb-8 shadow-md">
-                  <Target size={40} className="text-white" />
+                <div className="w-12 h-12 sm:w-20 sm:h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-8 shadow-md">
+                  <Target size={32} className="sm:size-40 text-white" />
                 </div>
-                <h3 className="text-4xl font-bold mb-6 text-white">Our Mission</h3>
-                <p className="text-gray-400 text-lg leading-relaxed">
+                <h3 className="text-xl sm:text-4xl font-bold mb-3 sm:mb-6 text-white">Our Mission</h3>
+                <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
                   Deliver intelligent, scalable, and future-ready software solutions that accelerate growth.
                 </p>
               </div>
             </div>
 
-            <div className="group rounded-[2.5rem] p-12 bg-[#111] hover:bg-[#151515] transition-all border border-white/10 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+            <div className="group rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-12 bg-[#111] hover:bg-[#151515] transition-all border border-white/10 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 sm:w-64 sm:h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
               <div className="relative z-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-8 shadow-md">
-                  <Eye size={40} className="text-white" />
+                <div className="w-12 h-12 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-8 shadow-md">
+                  <Eye size={32} className="sm:size-40 text-white" />
                 </div>
-                <h3 className="text-4xl font-bold mb-6 text-white">Our Vision</h3>
-                <p className="text-gray-400 text-lg leading-relaxed">
+                <h3 className="text-xl sm:text-4xl font-bold mb-3 sm:mb-6 text-white">Our Vision</h3>
+                <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
                   Become a global leader in delivering transformative digital solutions.
                 </p>
               </div>
@@ -106,17 +106,17 @@ function AboutPage() {
           </div>
 
           {/* Core Values */}
-          <div className="text-center mb-20">
-            <div className="inline-block mb-4 px-4 py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur">
-              <span className="text-sm font-medium text-purple-400">⚡ What Drives Us</span>
+          <div className="text-center mb-10 sm:mb-20">
+            <div className="inline-block mb-2 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/5 rounded-full border border-white/10 backdrop-blur">
+              <span className="text-xs sm:text-sm font-medium text-purple-400">⚡ What Drives Us</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-2xl sm:text-5xl md:text-6xl font-bold mb-3 sm:mb-6 text-white">
               Our Core{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Values
               </span>
             </h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-400 text-base sm:text-xl max-w-xl sm:max-w-3xl mx-auto leading-relaxed">
               The principles that guide everything we create.
             </p>
           </div>

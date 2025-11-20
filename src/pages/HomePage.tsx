@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 relative overflow-hidden">
         {/* Background layer: sharp, no blur */}
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/hh.jpeg')" }} />
 
@@ -12,10 +12,10 @@ function HomePage() {
         <div className="absolute inset-0 bg-black/20" />
 
         {/* Content: glide-up animation */}
-        <div className="max-w-6xl mx-auto text-center relative z-10 py-20 glide-up">
+        <div className="w-full max-w-6xl mx-auto text-center relative z-10 py-12 sm:py-16 md:py-20 glide-up">
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-gray-300">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight text-gray-300">
             Innovative Software
             <br />
             <span className="text-gradient">
@@ -24,28 +24,28 @@ function HomePage() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-10 max-w-2xl sm:max-w-4xl mx-auto leading-relaxed">
             Transform your business with <span className="font-bold white-900">cutting-edge technology solutions</span>. 
             We deliver exceptional software services that drive growth and innovation.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="group px-10 py-4 wp-gradient-primary text-white text-lg font-bold hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-lg">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10 sm:mb-16">
+            <button className="group px-8 sm:px-10 py-4 min-w-[44px] min-h-[44px] wp-gradient-primary text-white text-base sm:text-lg font-bold hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-lg rounded-lg sm:rounded-xl">
               <span>Get Started</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 max-w-xs xs:max-w-2xl sm:max-w-3xl mx-auto">
             {[
               { number: '500+', label: 'Projects' },
               { number: '99.9%', label: 'Uptime' },
               { number: '24/7', label: 'Support' }
             ].map((stat, idx) => (
-              <div key={idx} className="wp-card wp-card-hover bg-white">
-                <div className="wp-card-img">
+              <div key={idx} className="wp-card wp-card-hover bg-white flex flex-col items-center">
+                <div className="wp-card-img w-full h-32 sm:h-36 md:h-40 flex items-center justify-center overflow-hidden rounded-t-xl">
                   <img
                     src={
                       idx === 0
@@ -55,13 +55,14 @@ function HomePage() {
                         : 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80'
                     }
                     alt={stat.label}
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="text-4xl font-black text-gradient mb-2">
+                <div className="p-4 sm:p-6 w-full">
+                  <div className="text-2xl sm:text-4xl font-black text-gradient mb-1 sm:mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 text-sm font-medium">{stat.label}</div>
+                  <div className="text-gray-600 text-xs sm:text-sm font-medium">{stat.label}</div>
                 </div>
               </div>
             ))}
@@ -70,46 +71,46 @@ function HomePage() {
       </section>
 
       {/* Features Section - Expanded */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 wp-section-light">
+      <section className="py-12 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 wp-section-light">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <div className="inline-block mb-4 px-4 py-2 bg-primary-100 border border-primary-200">
-              <span className="text-sm font-semibold text-primary-700">✦ Our Advantages</span>
+          <div className="text-center mb-10 sm:mb-20">
+            <div className="inline-block mb-2 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary-100 border border-primary-200 rounded-md">
+              <span className="text-xs sm:text-sm font-semibold text-primary-700">✦ Our Advantages</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6 text-gray-900">
               Why Choose <span className="text-gradient">Vesra</span>
             </h2>
-            <p className="text-gray-600 text-xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-base sm:text-xl max-w-xl sm:max-w-3xl mx-auto leading-relaxed">
               We combine expertise, innovation, and dedication to deliver exceptional results that exceed expectations
             </p>
           </div>
 
           {/* Lightning Fast Performance */}
-          <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-yellow-50 flex items-center justify-center flex-shrink-0">
-                  <Zap size={32} className="text-yellow-600" />
+          <div className="mb-10 sm:mb-20">
+            <div className="wp-card p-4 sm:p-8 md:p-10 bg-white">
+              <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 mb-4 md:mb-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-50 flex items-center justify-center flex-shrink-0 rounded-lg">
+                  <Zap size={28} className="sm:size-32 text-yellow-600" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Lightning Fast Performance</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">Lightning Fast Performance</h3>
+                  <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                     Speed is critical in today's digital world. Our optimized solutions deliver exceptional performance that keeps your users engaged and your business running smoothly.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-yellow-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Sub-Second Response Times</h4>
-                  <p className="text-gray-600">Optimized code and infrastructure ensure your applications respond in milliseconds, not seconds.</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-4 md:mt-8">
+                <div className="border-l-4 border-yellow-600 pl-4 sm:pl-6">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">Sub-Second Response Times</h4>
+                  <p className="text-gray-600 text-xs sm:text-base">Optimized code and infrastructure ensure your applications respond in milliseconds, not seconds.</p>
                 </div>
-                <div className="border-l-4 border-yellow-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Performance Monitoring</h4>
-                  <p className="text-gray-600">Real-time monitoring and alerts to identify and resolve performance bottlenecks instantly.</p>
+                <div className="border-l-4 border-yellow-600 pl-4 sm:pl-6">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">Performance Monitoring</h4>
+                  <p className="text-gray-600 text-xs sm:text-base">Real-time monitoring and alerts to identify and resolve performance bottlenecks instantly.</p>
                 </div>
-                <div className="border-l-4 border-yellow-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Load Optimization</h4>
-                  <p className="text-gray-600">CDN integration, caching strategies, and code splitting for blazing-fast page loads.</p>
+                <div className="border-l-4 border-yellow-600 pl-4 sm:pl-6">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">Load Optimization</h4>
+                  <p className="text-gray-600 text-xs sm:text-base">CDN integration, caching strategies, and code splitting for blazing-fast page loads.</p>
                 </div>
               </div>
             </div>

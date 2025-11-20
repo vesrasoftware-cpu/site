@@ -39,26 +39,26 @@ function ContactPage() {
     <div className="pt-16">
       {/* ---------------- HERO ---------------- */}
       <section
-        className="min-h-[70vh] flex items-center justify-center px-6 relative overflow-hidden"
+        className="min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 md:px-8 relative overflow-hidden"
         style={{ backgroundImage: "url('/contact.jpeg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/40" />
-           <div className="absolute top-20 right-10 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl animate-float"></div>
-           <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+           <div className="absolute top-10 right-2 w-40 h-40 sm:w-96 sm:h-96 bg-primary-600/10 rounded-full blur-3xl animate-float"></div>
+           <div className="absolute bottom-10 left-2 w-40 h-40 sm:w-96 sm:h-96 bg-accent-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="inline-block mb-8 px-6 py-3 glass rounded-full border border-primary-600">
-            <span className="text-sm font-medium text-primary-600">✦ Get In Touch</span>
+        <div className="max-w-2xl sm:max-w-5xl mx-auto text-center relative z-10">
+          <div className="inline-block mb-4 sm:mb-8 px-4 sm:px-6 py-2 sm:py-3 glass rounded-full border border-primary-600">
+            <span className="text-xs sm:text-sm font-medium text-primary-600">✦ Get In Touch</span>
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-extrabold mb-8 text-white">
+          <h1 className="text-3xl sm:text-6xl md:text-7xl font-extrabold mb-4 sm:mb-8 text-white">
             Contact{' '}
             <span className="bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">Us</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto font-light">
+          <p className="text-base sm:text-xl md:text-2xl text-gray-300 leading-relaxed max-w-xl sm:max-w-3xl mx-auto font-light">
             Have a project in mind? Let's discuss how we can help{' '}
             <span className="text-white font-semibold">bring your vision to life</span>.
           </p>
@@ -68,48 +68,46 @@ function ContactPage() {
       </section>
 
       {/* ---------------- MAIN SECTION ---------------- */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 relative overflow-hidden">
+      <section className="py-10 sm:py-16 md:py-24 px-4 sm:px-6 md:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-black"></div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* ----- CONTACT CARDS ----- */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-20">
             {/* Phone */}
-            <div className="wp-card wp-card-hover bg-white text-center">
-              <div className="wp-card-img">
-                <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80" alt="phone" />
+            <div className="wp-card wp-card-hover bg-white text-center flex flex-col items-center">
+              <div className="wp-card-img w-full h-32 sm:h-36 md:h-40 flex items-center justify-center overflow-hidden rounded-t-xl">
+                <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80" alt="phone" className="w-full h-full object-cover" />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">Phone</h3>
-                <a href="tel:9100608695" className="text-gray-600 hover:text-primary-600 transition-colors text-lg">
+              <div className="p-4 sm:p-6 w-full">
+                <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-3 text-gray-900">Phone</h3>
+                <a href="tel:9100608695" className="block min-h-[44px] text-gray-600 hover:text-primary-600 transition-colors text-base sm:text-lg">
                   9100608695
                 </a>
               </div>
             </div>
 
             {/* Email */}
-            <div className="wp-card wp-card-hover bg-white text-center">
-              <div className="wp-card-img">
-                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="email" />
+            <div className="wp-card wp-card-hover bg-white text-center flex flex-col items-center">
+              <div className="wp-card-img w-full h-32 sm:h-36 md:h-40 flex items-center justify-center overflow-hidden rounded-t-xl">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="email" className="w-full h-full object-cover" />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">Email</h3>
-
-                <a href="mailto:Vesrasoftware@gmail.com" className="text-gray-600 hover:text-primary-600 transition-colors break-all text-lg">
+              <div className="p-4 sm:p-6 w-full">
+                <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-3 text-gray-900">Email</h3>
+                <a href="mailto:Vesrasoftware@gmail.com" className="block min-h-[44px] text-gray-600 hover:text-primary-600 transition-colors break-all text-base sm:text-lg">
                   Vesrasoftware@gmail.com
                 </a>
               </div>
             </div>
 
             {/* WhatsApp */}
-            <div className="wp-card wp-card-hover bg-white text-center">
-              <div className="wp-card-img">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="whatsapp" />
+            <div className="wp-card wp-card-hover bg-white text-center flex flex-col items-center">
+              <div className="wp-card-img w-full h-32 sm:h-36 md:h-40 flex items-center justify-center overflow-hidden rounded-t-xl">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="whatsapp" className="w-full h-full object-cover" />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">WhatsApp</h3>
-
-                <a href="https://wa.me/919100608695" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 transition-colors text-lg">
+              <div className="p-4 sm:p-6 w-full">
+                <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-3 text-gray-900">WhatsApp</h3>
+                <a href="https://wa.me/919100608695" target="_blank" rel="noopener noreferrer" className="block min-h-[44px] text-gray-600 hover:text-primary-600 transition-colors text-base sm:text-lg">
                   Chat with us
                 </a>
               </div>
@@ -117,7 +115,7 @@ function ContactPage() {
           </div>
 
           {/* ----- FORM + INFO SECTION ----- */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* FORM */}
             <div className="bg-gray-900 p-10 rounded-3xl">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
