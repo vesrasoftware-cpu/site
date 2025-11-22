@@ -23,7 +23,7 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900 border-b border-gray-800 shadow-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-gray-800 shadow-md">
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -44,7 +44,7 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 className={`px-4 py-2 min-h-[44px] text-sm font-semibold rounded-md transition-all ${
                   currentPage === item.id
                     ? 'text-white bg-primary-600'
-                    : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                    : 'text-black hover:text-white hover:bg-gray-800'
                 }`}
               >
                 {item.label}
@@ -80,7 +80,7 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
                 className={`block w-full text-left px-4 py-3 min-h-[44px] text-sm font-semibold rounded-md transition-all ${
                   currentPage === item.id
                     ? 'text-white bg-primary-600'
-                    : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                    : 'text-black hover:text-white hover:bg-gray-800'
                 }`}
               >
                 {item.label}

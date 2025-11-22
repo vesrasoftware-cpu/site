@@ -11,7 +11,7 @@ function Footer({ setCurrentPage }: FooterProps) {
   };
 
   return (
-    <footer className="bg-gray-900 text-white border-t border-gray-800">
+    <footer className="bg-gray-100 text-white border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-12 py-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mb-20">
 
@@ -30,7 +30,7 @@ function Footer({ setCurrentPage }: FooterProps) {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-2xl font-bold mb-8">Quick Links</h4>
+            <h4 className="text-2xl text-black font-bold mb-8">Quick Links</h4>
             <ul className="space-y-4">
               {[
                 { id: 'home', label: 'Home' },
@@ -52,7 +52,7 @@ function Footer({ setCurrentPage }: FooterProps) {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-2xl font-bold mb-8">Contact Info</h4>
+            <h4 className="text-2xl text-black font-bold mb-8">Contact Info</h4>
             <ul className="space-y-6">
               <li className="flex items-start space-x-4 text-gray-400">
                 <Phone size={28} className="mt-1 flex-shrink-0 text-primary-400" />
