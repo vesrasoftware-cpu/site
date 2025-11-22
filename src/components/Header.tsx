@@ -29,9 +29,10 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
           {/* Logo */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-2 text-2xl font-bold text-white hover:text-primary-500 transition-colors"
+            className="flex items-center gap-2 text-white hover:text-primary-500 transition-colors"
+            aria-label="Go to home"
           >
-            VESRA
+            <img src="/vesralogo.svg" alt="Vesra logo" className="h-20 w-auto sm:h-24" />
           </button>
 
           {/* Desktop Navigation */}

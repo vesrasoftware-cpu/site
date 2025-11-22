@@ -17,8 +17,8 @@ function Footer({ setCurrentPage }: FooterProps) {
 
           {/* Brand Section */}
           <div>
-            <h3 className="text-4xl font-bold mb-8">
-              VESRA
+            <h3 className="mb-6">
+              <img src="/vesralogo.svg" alt="Vesra logo" className="h-28 w-auto" />
             </h3>
             <p className="text-gray-400 text-xl leading-relaxed mb-8">
               Transforming businesses through innovative software solutions and cutting-edge technology.
