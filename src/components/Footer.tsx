@@ -21,7 +21,7 @@ function Footer({ setCurrentPage }: FooterProps) {
   <div className="flex items-center gap-4">
     <img src="/vesralogol.svg" alt="Vesra logo" className="h-8 w-auto" />
 
-    <img src="/vesralogor1.svg" alt="Vesra logo" className="h-8 w-auto" />
+    <img src="/vesralogor1.svg" alt="Vesra logo" className="h-8 w-auto transform -translate-x-3" />
   </div>
 </h3>
 
