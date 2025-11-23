@@ -24,7 +24,7 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-gray-800 shadow-md">
-      <nav className="max-w-7xl mx-auto px-6 py-4">
+      <nav className="max-w-7xl mx-auto px-6 py-0">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button
