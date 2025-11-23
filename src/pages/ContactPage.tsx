@@ -47,13 +47,13 @@ function ContactPage() {
       <section
         className="min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 md:px-8 relative overflow-hidden "
         style={{
-          backgroundImage: "url('/contact.jpeg')",
+          backgroundImage: "url('/contact.svg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
         {/* Lightened overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/20" />
 
         {/* Blue glow circles */}
         <div className="absolute top-10 right-2 w-40 h-40 sm:w-96 sm:h-96 bg-blue-400/20 rounded-full blur-3xl animate-float"></div>
