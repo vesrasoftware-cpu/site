@@ -45,7 +45,7 @@ function ContactPage() {
     <div className="pt-16 bg-white text-slate-900">
       {/* ---------------- HERO ---------------- */}
       <section
-        className="min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 md:px-8 relative overflow-hidden"
+        className="min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center px-4 sm:px-6 md:px-8 relative overflow-hidden "
         style={{
           backgroundImage: "url('/contact.jpeg')",
           backgroundSize: 'cover',
@@ -53,7 +53,7 @@ function ContactPage() {
         }}
       >
         {/* Lightened overlay */}
-        <div className="absolute inset-0" />
+        <div className="absolute inset-0 bg-black/40" />
 
         {/* Blue glow circles */}
         <div className="absolute top-10 right-2 w-40 h-40 sm:w-96 sm:h-96 bg-blue-400/20 rounded-full blur-3xl animate-float"></div>
@@ -76,9 +76,9 @@ function ContactPage() {
             </span>
           </h1>
 
-          <p className="text-bold sm:text-xl md:text-2xl text-white leading-relaxed max-w-xl sm:max-w-3xl mx-auto font-light">
+          <p className="font-semibold sm:text-xl md:text-2xl text-white leading-relaxed max-w-xl sm:max-w-3xl mx-auto font-light">
             Have a project in mind? Let's discuss how we can help{' '}
-            <span className="font-semibold text-red-600">
+            <span className="font-bold text-red-600">
               bring your vision to life.
             </span>
           </p>

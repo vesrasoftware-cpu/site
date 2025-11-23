@@ -69,7 +69,7 @@ function ServicesPage({ setCurrentPage }: ServicesPageProps) {
             </span>
           </h1>
 
-          <p className="text-base xs:text-lg sm:text-xl text-gray-400 max-w-xl sm:max-w-3xl mx-auto">
+          <p className="text-base xs:text-lg sm:text-xl text-white max-w-xl sm:max-w-3xl mx-auto">
             High-quality software services powered by innovation and world-class execution.
           </p>
         </div>

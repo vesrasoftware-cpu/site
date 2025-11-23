@@ -17,10 +17,15 @@ function Footer({ setCurrentPage }: FooterProps) {
 
           {/* Brand Section */}
           <div>
-            <h3 className="mb-6">
-              <img src="/vesralogo.svg" alt="Vesra logo" className="h-28 w-auto" />
-            </h3>
-            <p className="text-gray-400 text-xl leading-relaxed mb-8">
+<h3 className="mb-3">
+  <div className="flex items-center gap-4">
+    <img src="/vesralogol.svg" alt="Vesra logo" className="h-8 w-auto" />
+
+    <img src="/vesralogor1.svg" alt="Vesra logo" className="h-8 w-auto" />
+  </div>
+</h3>
+
+            <p className="text-blue-900 text-xl leading-relaxed mb-8">
               Transforming businesses through innovative software solutions and cutting-edge technology.
             </p>
             <div className="px-6 py-4 bg-yellow-600 text-white text-lg font-medium">
@@ -41,7 +46,7 @@ function Footer({ setCurrentPage }: FooterProps) {
                 <li key={item.id}>
                   <button
                     onClick={() => handleNavClick(item.id)}
-                    className="text-gray-400 text-xl hover:text-primary-400 transition-colors"
+                    className="text-blue-500 text-xl hover:text-primary-400 transition-colors"
                   >
                     {item.label}
                   </button>
@@ -54,7 +59,7 @@ function Footer({ setCurrentPage }: FooterProps) {
           <div>
             <h4 className="text-2xl text-black font-bold mb-8">Contact Info</h4>
             <ul className="space-y-6">
-              <li className="flex items-start space-x-4 text-gray-400">
+              <li className="flex items-start space-x-4 text-black">
                 <Phone size={28} className="mt-1 flex-shrink-0 text-primary-400" />
                 <a
                   href="tel:9100608695"
@@ -64,7 +69,7 @@ function Footer({ setCurrentPage }: FooterProps) {
                 </a>
               </li>
 
-              <li className="flex items-start space-x-4 text-gray-400">
+              <li className="flex items-start space-x-4 text-black">
                 <Mail size={28} className="mt-1 flex-shrink-0 text-primary-400" />
                 <a
                   href="mailto:Vesrasoftware@gmail.com"
@@ -74,7 +79,7 @@ function Footer({ setCurrentPage }: FooterProps) {
                 </a>
               </li>
 
-              <li className="flex items-start space-x-4 text-gray-400">
+              <li className="flex items-start space-x-4 text-black">
                 <MapPin size={28} className="mt-1 flex-shrink-0 text-primary-400" />
                 <span className="text-lg leading-relaxed">
                   Dr no 1-20-268, SY no 72, G2, 1st floor, KAIZEN MIRZA WHITE HOUSE,  

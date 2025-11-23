@@ -32,7 +32,10 @@ function Header({ currentPage, setCurrentPage }: HeaderProps) {
             className="flex items-center gap-2 text-white hover:text-primary-500 transition-colors"
             aria-label="Go to home"
           >
-            <img src="/vesralogo.svg" alt="Vesra logo" className="h-20 w-auto sm:h-24" />
+            <img src="/vesralogol.svg" alt="Vesra logo" className="h-20 w-auto sm:h-24" />
+            <span className="h-20 w-auto sm:h-24">
+              <img src="/vesralogor1.svg" alt="Vesra logo" className="h-20 w-auto sm:h-24" />
+            </span>
           </button>
 
           {/* Desktop Navigation */}

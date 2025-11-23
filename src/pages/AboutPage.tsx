@@ -23,8 +23,8 @@ function AboutPage() {
               Vesra
             </span>
           </h1>
-          <p className="text-base sm:text-xl md:text-2xl text-slate-700 leading-relaxed max-w-xl sm:max-w-3xl mx-auto font-light">
-            We are a <span className="text-slate-900 font-semibold">forward-thinking</span> software services company
+          <p className="text-base sm:text-xl md:text-2xl text-white leading-relaxed max-w-xl sm:max-w-3xl mx-auto font-light">
+            We are a <span className="text-white font-semibold">forward-thinking</span> software services company
             building innovative solutions for tomorrow.
           </p>
         </div>
