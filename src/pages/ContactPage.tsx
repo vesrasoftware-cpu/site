@@ -282,7 +282,7 @@ function ContactPage() {
               {/* Address Card */}
               <div className="bg-white border border-blue-100 p-8 rounded-2xl shadow-lg mb-8">
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">
-                  Vesra Software
+                  Vesra Software pvt ltd
                 </h3>
                 <p className="text-slate-700 leading-relaxed text-lg">
                   Dr no 1-20-268, SY no 72, G2, 1st floor, <br />
