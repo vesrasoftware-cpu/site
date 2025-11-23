@@ -28,7 +28,7 @@ function Footer({ setCurrentPage }: FooterProps) {
             <p className="text-blue-900 text-xl leading-relaxed mb-8">
               Transforming businesses through innovative software solutions and cutting-edge technology.
             </p>
-            <div className="px-6 py-4 bg-yellow-600 text-white text-lg font-medium">
+            <div className="font-semibold text-black text-lg">
               Building the Future
             </div>
           </div>
