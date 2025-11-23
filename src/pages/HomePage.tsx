@@ -6,37 +6,41 @@ interface HomePageProps {
 
 function HomePage({ setCurrentPage }: HomePageProps) {
   return (
-    <div className="pt-16">
+    <div className="pt-16 text-slate-900">
+
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 relative overflow-hidden">
-        {/* Background layer: sharp, no blur */}
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/hh.jpeg')" }} />
+        
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/hh.jpeg')" }}
+        />
 
-        {/* Dark overlay for legibility, less opacity for clarity */}
-        <div className="absolute inset-0 bg-black/20" />
+        {/* Light Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
 
-        {/* Content: glide-up animation */}
+        {/* Content */}
         <div className="w-full max-w-6xl mx-auto text-center relative z-10 py-12 sm:py-16 md:py-20 glide-up">
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight text-gray-300">
-            Innovative Software
-            <br />
-            <span className="text-gradient">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight text-white">
+            Innovative Software <br />
+            <span className="bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text">
               Solutions for Tomorrow
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-10 max-w-2xl sm:max-w-4xl mx-auto leading-relaxed">
-            Transform your business with <span className="font-bold white-900">cutting-edge technology solutions</span>. 
+          <p className="text-base sm:text-xl md:text-2xl text-gray-400 mb-6 sm:mb-10 max-w-2xl sm:max-w-4xl mx-auto leading-relaxed">
+            Transform your business with <span className="font-bold">cutting-edge technology solutions</span>. 
             We deliver exceptional software services that drive growth and innovation.
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10 sm:mb-16">
             <button
-              className="group px-8 sm:px-10 py-4 min-w-[44px] min-h-[44px] wp-gradient-primary text-white text-base sm:text-lg font-bold hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-lg rounded-lg sm:rounded-xl"
+              className="group px-10 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-lg font-bold rounded-xl shadow-md hover:opacity-90 transition-all flex items-center gap-3"
               onClick={() => setCurrentPage('contact')}
             >
               <span>Get Started</span>
@@ -45,14 +49,14 @@ function HomePage({ setCurrentPage }: HomePageProps) {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 max-w-xs xs:max-w-2xl sm:max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {[
               { number: '500+', label: 'Projects' },
               { number: '99.9%', label: 'Uptime' },
               { number: '24/7', label: 'Support' }
             ].map((stat, idx) => (
-              <div key={idx} className="wp-card wp-card-hover bg-white flex flex-col items-center">
-                <div className="wp-card-img w-full h-32 sm:h-36 md:h-40 flex items-center justify-center overflow-hidden rounded-t-xl">
+              <div key={idx} className="border border-blue-100 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+                <div className="w-full h-40 overflow-hidden rounded-t-xl">
                   <img
                     src={
                       idx === 0
@@ -65,713 +69,740 @@ function HomePage({ setCurrentPage }: HomePageProps) {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-4 sm:p-6 w-full">
-                  <div className="text-2xl sm:text-4xl font-black text-gradient mb-1 sm:mb-2">
+                <div className="p-6">
+                  <div className="text-4xl font-black bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 text-xs sm:text-sm font-medium">{stat.label}</div>
+                  <div className="text-slate-600 text-sm font-medium">{stat.label}</div>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* Features Section - Expanded */}
-      <section className="py-12 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 md:px-8 wp-section-light">
+      {/* ------------------------------ */}
+      {/* FEATURES SECTION */}
+      {/* ------------------------------ */}
+      <section className="py-20 px-6 bg-blue-50/40">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10 sm:mb-20">
-            <div className="inline-block mb-2 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary-100 border border-primary-200 rounded-md">
-              <span className="text-xs sm:text-sm font-semibold text-primary-700">✦ Our Advantages</span>
+
+          {/* Section Title */}
+          <div className="text-center mb-20">
+            <div className="inline-block mb-4 px-4 py-2 bg-blue-100 border border-blue-200 rounded-md">
+              <span className="text-sm font-semibold text-blue-700">✦ Our Advantages</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-6 text-gray-900">
-              Why Choose <span className="text-gradient">Vesra</span>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+              Why Choose <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Vesra</span>
             </h2>
-            <p className="text-gray-600 text-base sm:text-xl max-w-xl sm:max-w-3xl mx-auto leading-relaxed">
-              We combine expertise, innovation, and dedication to deliver exceptional results that exceed expectations
+
+            <p className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed">
+              We combine expertise, innovation, and dedication to deliver exceptional results that exceed expectations.
             </p>
           </div>
 
-          {/* Lightning Fast Performance */}
-          <div className="mb-10 sm:mb-20">
-            <div className="wp-card p-4 sm:p-8 md:p-10 bg-white">
-              <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 mb-4 md:mb-6">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-50 flex items-center justify-center flex-shrink-0 rounded-lg">
-                  <Zap size={28} className="sm:size-32 text-yellow-600" />
+          {/* Lightning Fast */}
+          <div className="mb-20">
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Zap size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">Lightning Fast Performance</h3>
-                  <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                    Speed is critical in today's digital world. Our optimized solutions deliver exceptional performance that keeps your users engaged and your business running smoothly.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Lightning Fast Performance</h3>
+                  <p className="text-slate-600 text-lg">
+                    Speed is critical in today's digital world. Our optimized solutions deliver exceptional performance.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-4 md:mt-8">
-                <div className="border-l-4 border-yellow-600 pl-4 sm:pl-6">
-                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">Sub-Second Response Times</h4>
-                  <p className="text-gray-600 text-xs sm:text-base">Optimized code and infrastructure ensure your applications respond in milliseconds, not seconds.</p>
-                </div>
-                <div className="border-l-4 border-yellow-600 pl-4 sm:pl-6">
-                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">Performance Monitoring</h4>
-                  <p className="text-gray-600 text-xs sm:text-base">Real-time monitoring and alerts to identify and resolve performance bottlenecks instantly.</p>
-                </div>
-                <div className="border-l-4 border-yellow-600 pl-4 sm:pl-6">
-                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">Load Optimization</h4>
-                  <p className="text-gray-600 text-xs sm:text-base">CDN integration, caching strategies, and code splitting for blazing-fast page loads.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-6">
+                {[
+                  { t: 'Sub-Second Response Times', d: 'Optimized code and infrastructure ensure your applications respond in milliseconds.' },
+                  { t: 'Performance Monitoring', d: 'Real-time monitoring and alerts to identify bottlenecks instantly.' },
+                  { t: 'Load Optimization', d: 'CDN integration, caching strategies, and code splitting for faster loads.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
 
-          {/* Secure & Reliable */}
+          {/* ------------------------------ */}
+          {/* SECURITY */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-primary-50 flex items-center justify-center flex-shrink-0">
-                  <Shield size={32} className="text-primary-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Shield size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Secure & Reliable</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Trust is the foundation of our services. We implement enterprise-grade security measures and maintain 99.9% uptime to ensure your business never stops.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Secure & Reliable</h3>
+                  <p className="text-slate-600 text-lg">
+                    Trust is the foundation of our services. We implement enterprise-grade security and maintain 99.9% uptime.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-primary-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">99.9% Uptime SLA</h4>
-                  <p className="text-gray-600">Guaranteed availability with redundant systems and automated failover mechanisms.</p>
-                </div>
-                <div className="border-l-4 border-primary-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Data Encryption</h4>
-                  <p className="text-gray-600">End-to-end encryption for data at rest and in transit using industry-standard protocols.</p>
-                </div>
-                <div className="border-l-4 border-primary-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Regular Security Audits</h4>
-                  <p className="text-gray-600">Continuous security assessments and penetration testing to identify vulnerabilities.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: '99.9% Uptime SLA', d: 'Guaranteed availability with redundant systems and automated failover.' },
+                  { t: 'Data Encryption', d: 'End-to-end encryption for data at rest and in transit.' },
+                  { t: 'Security Audits', d: 'Continuous assessments and penetration tests to detect vulnerabilities.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
 
-          {/* Innovation First */}
+          {/* ------------------------------ */}
+          {/* INNOVATION */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-primary-50 flex items-center justify-center flex-shrink-0">
-                  <Sparkles size={32} className="text-primary-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Sparkles size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Innovation First Approach</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Stay ahead of the competition with cutting-edge technologies and forward-thinking strategies that position your business for future success.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Innovation First Approach</h3>
+                  <p className="text-slate-600 text-lg">
+                    Stay ahead with cutting-edge technologies and forward-thinking strategies.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-primary-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Emerging Technologies</h4>
-                  <p className="text-gray-600">Early adoption of AI, blockchain, and other emerging tech to give you a competitive edge.</p>
-                </div>
-                <div className="border-l-4 border-primary-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">R&D Investment</h4>
-                  <p className="text-gray-600">Dedicated research team exploring new methodologies and tools for better solutions.</p>
-                </div>
-                <div className="border-l-4 border-primary-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Future-Proof Architecture</h4>
-                  <p className="text-gray-600">Build systems designed to adapt and scale with evolving business needs and technologies.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Emerging Technologies', d: 'AI, blockchain, and other modern tools.' },
+                  { t: 'R&D Investment', d: 'Dedicated research teams exploring future solutions.' },
+                  { t: 'Future-Proof Architecture', d: 'Systems designed to adapt and scale over time.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
 
-          {/* Clean Code */}
+          {/* ------------------------------ */}
+          {/* CLEAN CODE */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-purple-50 flex items-center justify-center flex-shrink-0">
-                  <Code2 size={32} className="text-purple-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Code2 size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Clean Code Standards</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Quality code is maintainable code. We follow industry best practices to create scalable, well-documented codebases that stand the test of time.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Clean Code Standards</h3>
+                  <p className="text-slate-600 text-lg">
+                    We write clean, scalable, maintainable code following industry best practices.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-purple-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Code Reviews</h4>
-                  <p className="text-gray-600">Rigorous peer reviews and automated testing to ensure code quality and consistency.</p>
-                </div>
-                <div className="border-l-4 border-purple-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Comprehensive Documentation</h4>
-                  <p className="text-gray-600">Detailed documentation for easy onboarding and long-term maintainability.</p>
-                </div>
-                <div className="border-l-4 border-purple-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Design Patterns</h4>
-                  <p className="text-gray-600">Proven architectural patterns and SOLID principles for robust, scalable applications.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Code Reviews', d: 'Peer reviews & automated checks for quality.' },
+                  { t: 'Documentation', d: 'Clear and complete project documentation.' },
+                  { t: 'Design Patterns', d: 'Robust, scalable architectural patterns.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
 
-          {/* Global Reach */}
+          {/* ------------------------------ */}
+          {/* GLOBAL SUPPORT */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
                   <Globe size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Global Reach & Support</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Serve customers worldwide with confidence. Our global infrastructure and 24/7 support ensure your business operates seamlessly across all time zones.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Global Reach & Support</h3>
+                  <p className="text-slate-600 text-lg">
+                    Our global infrastructure ensures your business operates 24/7 without interruption.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">24/7 Support Team</h4>
-                  <p className="text-gray-600">Round-the-clock technical support with guaranteed response times for critical issues.</p>
-                </div>
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Multi-Region Deployment</h4>
-                  <p className="text-gray-600">Deploy applications across multiple regions for low latency and high availability.</p>
-                </div>
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Localization Support</h4>
-                  <p className="text-gray-600">Multi-language and multi-currency support to reach global markets effectively.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: '24/7 Support', d: 'Guaranteed response times for critical issues.' },
+                  { t: 'Multi-Region Deployment', d: 'Low latency with global infrastructure.' },
+                  { t: 'Localization Support', d: 'Multi-language & multi-currency support.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
 
-          {/* AI-Powered Solutions */}
+          {/* ------------------------------ */}
+          {/* AI */}
+          {/* ------------------------------ */}
           <div>
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-pink-50 flex items-center justify-center flex-shrink-0">
-                  <Brain size={32} className="text-pink-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Brain size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">AI-Powered Solutions</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Leverage artificial intelligence to automate tasks, gain insights, and deliver personalized experiences that delight your customers.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">AI-Powered Solutions</h3>
+                  <p className="text-slate-600 text-lg">
+                    Automate tasks, gain insights, and deliver intelligent digital experiences.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-pink-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Intelligent Automation</h4>
-                  <p className="text-gray-600">AI-driven automation to reduce manual tasks and improve operational efficiency.</p>
-                </div>
-                <div className="border-l-4 border-pink-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Smart Recommendations</h4>
-                  <p className="text-gray-600">Machine learning algorithms that provide personalized product and content recommendations.</p>
-                </div>
-                <div className="border-l-4 border-pink-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Anomaly Detection</h4>
-                  <p className="text-gray-600">AI-powered monitoring to detect unusual patterns and prevent potential issues proactively.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Intelligent Automation', d: 'Reduce manual work with AI-driven automation.' },
+                  { t: 'Smart Recommendations', d: 'Personalized recommendations powered by ML.' },
+                  { t: 'Anomaly Detection', d: 'Identify unusual patterns before issues arise.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
-      {/* Technologies Section - Expanded */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 wp-section-light">
+      {/* ------------------------------ */}
+      {/* TECHNOLOGIES SECTION */}
+      {/* ------------------------------ */}
+      <section className="py-20 sm:py-24 md:py-32 px-6 bg-blue-50/40">
         <div className="max-w-7xl mx-auto">
+
+          {/* Title */}
           <div className="text-center mb-20">
-            <div className="inline-block mb-4 px-4 py-2 bg-primary-100 border border-primary-200">
-              <span className="text-sm font-semibold text-primary-700">⚡ Our Technology Stack</span>
+            <div className="inline-block mb-4 px-4 py-2 bg-blue-100 border border-blue-200">
+              <span className="text-sm font-semibold text-blue-700">⚡ Our Technology Stack</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Powered by <span className="text-gradient">Modern Technologies</span>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+              Powered by <span className="bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text">Modern Technologies</span>
             </h2>
-            <p className="text-gray-600 text-xl max-w-3xl mx-auto leading-relaxed">
-              We leverage cutting-edge technologies to build scalable, secure, and high-performance solutions
+
+            <p className="text-slate-600 text-xl max-w-3xl mx-auto">
+              We leverage cutting-edge technologies to build scalable, secure solutions.
             </p>
           </div>
 
-          {/* Cloud Native */}
+          {/* ------------------------------ */}
+          {/* CLOUD NATIVE */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
                   <Cloud size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Cloud Native Development</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Build applications that leverage the full potential of cloud computing with scalability, resilience, and flexibility at their core.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Cloud Native Development</h3>
+                  <p className="text-slate-600 text-lg">
+                    Build applications that embrace scalability and resilience through cloud technologies.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Microservices Architecture</h4>
-                  <p className="text-gray-600">Design and deploy independent, loosely-coupled services that scale efficiently and independently.</p>
-                </div>
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Containerization</h4>
-                  <p className="text-gray-600">Docker and Kubernetes orchestration for consistent deployments across all environments.</p>
-                </div>
-                <div className="border-l-4 border-blue-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Auto-Scaling</h4>
-                  <p className="text-gray-600">Dynamic resource allocation that automatically adjusts to handle varying workloads efficiently.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Microservices Architecture', d: 'Independent services that scale efficiently.' },
+                  { t: 'Containerization', d: 'Docker & Kubernetes for consistent deployments.' },
+                  { t: 'Auto-Scaling', d: 'Automatic resource allocation based on demand.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
 
-          {/* Big Data */}
+          {/* ------------------------------ */}
+          {/* BIG DATA */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-purple-50 flex items-center justify-center flex-shrink-0">
-                  <Database size={32} className="text-purple-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Database size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Big Data & Analytics</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Process and analyze massive datasets to extract valuable insights that drive informed business decisions.
-                  </p>
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Big Data & Analytics</h3>
+                  <p className="text-slate-600 text-lg">Analyze massive datasets to extract meaningful insights.</p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-purple-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Data Warehousing</h4>
-                  <p className="text-gray-600">Build robust data warehouses using Snowflake, Redshift, or BigQuery for enterprise analytics.</p>
-                </div>
-                <div className="border-l-4 border-purple-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Real-Time Processing</h4>
-                  <p className="text-gray-600">Stream processing with Apache Kafka and Spark for instant data insights and reactions.</p>
-                </div>
-                <div className="border-l-4 border-purple-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Data Visualization</h4>
-                  <p className="text-gray-600">Interactive dashboards and reports using Tableau, Power BI, and custom visualization tools.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Data Warehousing', d: 'Snowflake, Redshift, BigQuery & more.' },
+                  { t: 'Real-Time Processing', d: 'Kafka & Spark for live data insights.' },
+                  { t: 'Visualization', d: 'Dashboards using Tableau, Power BI, custom charts.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Security */}
+          {/* ------------------------------ */}
+          {/* SECURITY */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-red-50 flex items-center justify-center flex-shrink-0">
-                  <Lock size={32} className="text-red-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Lock size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Enterprise Security</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Implement comprehensive security measures to protect your data, applications, and infrastructure from threats.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Enterprise Security</h3>
+                  <p className="text-slate-600 text-lg">
+                    Protect your infrastructure, applications, and data with industry-standard security.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-red-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Zero Trust Architecture</h4>
-                  <p className="text-gray-600">Never trust, always verify - implementing identity-based security at every layer.</p>
-                </div>
-                <div className="border-l-4 border-red-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Encryption & Compliance</h4>
-                  <p className="text-gray-600">End-to-end encryption, GDPR, HIPAA, and SOC 2 compliance for data protection.</p>
-                </div>
-                <div className="border-l-4 border-red-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Threat Detection</h4>
-                  <p className="text-gray-600">AI-powered security monitoring and automated threat response systems.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Zero Trust Architecture', d: 'Identity-based security for every layer.' },
+                  { t: 'Compliance', d: 'GDPR, HIPAA, SOC 2, encryption everywhere.' },
+                  { t: 'Threat Detection', d: 'AI-powered monitoring and automated response.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
 
-          {/* DevOps */}
+          {/* ------------------------------ */}
+          {/* DEVOPS */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-primary-50 flex items-center justify-center flex-shrink-0">
-                  <Rocket size={32} className="text-primary-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Rocket size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">DevOps & CI/CD</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Accelerate development cycles with automated workflows, continuous integration, and seamless deployment pipelines.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">DevOps & CI/CD</h3>
+                  <p className="text-slate-600 text-lg">
+                    Accelerate development cycles through automation and continuous deployment.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-primary-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Automated Pipelines</h4>
-                  <p className="text-gray-600">Jenkins, GitLab CI, and GitHub Actions for automated testing and deployment.</p>
-                </div>
-                <div className="border-l-4 border-primary-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Infrastructure as Code</h4>
-                  <p className="text-gray-600">Terraform and Ansible for reproducible and version-controlled infrastructure.</p>
-                </div>
-                <div className="border-l-4 border-primary-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Monitoring & Logging</h4>
-                  <p className="text-gray-600">Comprehensive observability with Prometheus, Grafana, and ELK stack.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Automated Pipelines', d: 'GitHub Actions, GitLab CI, Jenkins.' },
+                  { t: 'Infrastructure as Code', d: 'Terraform & Ansible for repeatable infra.' },
+                  { t: 'Monitoring & Logging', d: 'Prometheus, Grafana, ELK, OpenTelemetry.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
 
-          {/* AI & Machine Learning */}
+          {/* ------------------------------ */}
+          {/* MACHINE LEARNING */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-pink-50 flex items-center justify-center flex-shrink-0">
-                  <Brain size={32} className="text-pink-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Brain size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">AI & Machine Learning</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Harness the power of artificial intelligence to automate processes, predict outcomes, and enhance user experiences.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">AI & Machine Learning</h3>
+                  <p className="text-slate-600 text-lg">
+                    Deploy models that predict, analyze, and automate at scale.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-pink-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Predictive Analytics</h4>
-                  <p className="text-gray-600">Machine learning models that forecast trends and behaviors using historical data.</p>
-                </div>
-                <div className="border-l-4 border-pink-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Natural Language Processing</h4>
-                  <p className="text-gray-600">Build intelligent chatbots, sentiment analysis, and language understanding systems.</p>
-                </div>
-                <div className="border-l-4 border-pink-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Computer Vision</h4>
-                  <p className="text-gray-600">Image recognition, object detection, and visual AI for automated quality control.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Predictive Analytics', d: 'Models that forecast trends & behaviors.' },
+                  { t: 'Natural Language Processing', d: 'Chatbots, sentiment analysis, AI text tools.' },
+                  { t: 'Computer Vision', d: 'Object detection, quality automation, OCR.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Edge Computing */}
+          {/* ------------------------------ */}
+          {/* EDGE COMPUTING */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-indigo-50 flex items-center justify-center flex-shrink-0">
-                  <Cpu size={32} className="text-indigo-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Cpu size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Edge Computing</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Process data closer to the source for reduced latency, improved performance, and enhanced real-time capabilities.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Edge Computing</h3>
+                  <p className="text-slate-600 text-lg">
+                    Process data close to the source for faster, real-time insights.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-indigo-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">IoT Integration</h4>
-                  <p className="text-gray-600">Connect and manage billions of IoT devices with edge processing capabilities.</p>
-                </div>
-                <div className="border-l-4 border-indigo-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Low-Latency Applications</h4>
-                  <p className="text-gray-600">Deploy applications at the edge for millisecond response times and better UX.</p>
-                </div>
-                <div className="border-l-4 border-indigo-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Distributed Processing</h4>
-                  <p className="text-gray-600">Optimize bandwidth and reduce cloud costs with intelligent edge data processing.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'IoT Integration', d: 'Handle huge networks of sensors & devices.' },
+                  { t: 'Low-Latency Apps', d: 'Deliver microsecond response times.' },
+                  { t: 'Distributed Processing', d: 'Reduce cloud costs with edge workloads.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Microservices */}
+          {/* ------------------------------ */}
+          {/* MICROSERVICES */}
+          {/* ------------------------------ */}
           <div className="mb-20">
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-cyan-50 flex items-center justify-center flex-shrink-0">
-                  <Globe size={32} className="text-cyan-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <Globe size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Microservices Architecture</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Build applications as a collection of small, independent services that communicate through well-defined APIs.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Microservices Architecture</h3>
+                  <p className="text-slate-600 text-lg">
+                    Build modular systems that scale independently and communicate seamlessly.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-cyan-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Service Mesh</h4>
-                  <p className="text-gray-600">Istio and Linkerd for managing service-to-service communication securely.</p>
-                </div>
-                <div className="border-l-4 border-cyan-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">API Gateway</h4>
-                  <p className="text-gray-600">Centralized API management with Kong, AWS API Gateway, and Azure APIM.</p>
-                </div>
-                <div className="border-l-4 border-cyan-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Event-Driven Architecture</h4>
-                  <p className="text-gray-600">Asynchronous communication patterns for loosely coupled, scalable systems.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Service Mesh', d: 'Secure & observable service communication.' },
+                  { t: 'API Gateway', d: 'Kong, AWS APIG, Azure APIM.' },
+                  { t: 'Event Driven Systems', d: 'Asynchronous, scalable communication.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Analytics */}
+          {/* --------------------------------------------- */}
+          {/* ADVANCED ANALYTICS */}
+          {/* --------------------------------------------- */}
           <div>
-            <div className="wp-card p-10 bg-white">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-orange-50 flex items-center justify-center flex-shrink-0">
-                  <TrendingUp size={32} className="text-orange-600" />
+            <div className="border border-blue-100 p-10 bg-white rounded-xl shadow-sm">
+
+              <div className="flex gap-6 mb-6">
+                <div className="w-16 h-16 bg-blue-100 flex items-center justify-center rounded-lg">
+                  <TrendingUp size={32} className="text-blue-600" />
                 </div>
+
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">Advanced Analytics</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    Transform raw data into actionable insights with powerful analytics tools and business intelligence platforms.
+                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Advanced Analytics</h3>
+                  <p className="text-slate-600 text-lg">
+                    Turn raw data into meaningful insights to drive powerful business decisions.
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="border-l-4 border-orange-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Business Intelligence</h4>
-                  <p className="text-gray-600">Comprehensive BI solutions with custom dashboards and automated reporting.</p>
-                </div>
-                <div className="border-l-4 border-orange-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Predictive Modeling</h4>
-                  <p className="text-gray-600">Statistical models and ML algorithms to forecast business outcomes accurately.</p>
-                </div>
-                <div className="border-l-4 border-orange-600 pl-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">Customer Analytics</h4>
-                  <p className="text-gray-600">Deep insights into customer behavior, preferences, and lifetime value.</p>
-                </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                {[
+                  { t: 'Business Intelligence', d: 'Dashboards & automated reporting.' },
+                  { t: 'Predictive Modeling', d: 'Statistical + ML models for forecasting.' },
+                  { t: 'Customer Analytics', d: 'Understand behavior, trends, and retention.' }
+                ].map((item, i) => (
+                  <div key={i} className="border-l-4 border-blue-600 pl-6">
+                    <h4 className="text-lg font-bold text-slate-900 mb-2">{item.t}</h4>
+                    <p className="text-slate-600">{item.d}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 wp-section-light">
+      {/* ------------------------------ */}
+      {/* FAQ */}
+      {/* ------------------------------ */}
+      <section className="py-20 px-6 bg-blue-50/40">
         <div className="max-w-7xl mx-auto">
+
           <div className="text-center mb-20">
-            <div className="inline-block mb-4 px-4 py-2 bg-primary-100 border border-primary-200">
-              <span className="text-sm font-semibold text-primary-700">❓ Frequently Asked Questions</span>
+            <div className="inline-block mb-4 px-4 py-2 bg-blue-100 border border-blue-200">
+              <span className="text-sm font-semibold text-blue-700">❓ Frequently Asked Questions</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Got <span className="text-gradient">Questions?</span>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+              Got <span className="bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text">Questions?</span>
             </h2>
-            <p className="text-gray-600 text-xl max-w-3xl mx-auto leading-relaxed">
-              Find answers to the most common questions about our services, processes, and technologies
+
+            <p className="text-slate-600 text-xl max-w-3xl mx-auto leading-relaxed">
+              Find answers to the most common questions about our services, processes, and technologies.
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
-            <div className="wp-card p-8 bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">What technologies do you specialize in?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We specialize in modern web and mobile technologies including React, TypeScript, Node.js, Python, AWS, Azure, and Google Cloud. Our team stays current with the latest frameworks and tools to deliver cutting-edge solutions.
-              </p>
-            </div>
-
-            <div className="wp-card p-8 bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">How long does a typical project take?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Project timelines vary based on complexity and scope. A simple web application might take 4-8 weeks, while enterprise solutions can take 3-6 months. We provide detailed timelines during the planning phase and maintain transparent communication throughout the project.
-              </p>
-            </div>
-
-            <div className="wp-card p-8 bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Do you offer ongoing support and maintenance?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Yes, we offer comprehensive support and maintenance packages including 24/7 monitoring, regular updates, security patches, and technical support. We ensure your applications remain secure, performant, and up-to-date.
-              </p>
-            </div>
-
-            <div className="wp-card p-8 bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Can you work with our existing systems?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Absolutely! We have extensive experience integrating with legacy systems, third-party APIs, and existing infrastructure. Our team ensures seamless integration while modernizing your technology stack incrementally.
-              </p>
-            </div>
-
-            <div className="wp-card p-8 bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">What is your development process?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We follow agile methodologies with iterative development cycles. Our process includes discovery, design, development, testing, and deployment phases. You'll receive regular updates, demos, and have opportunities for feedback throughout the project.
-              </p>
-            </div>
-
-            <div className="wp-card p-8 bg-white">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">How do you ensure project security and data privacy?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Security is our top priority. We implement industry-standard security practices, conduct regular code reviews and security audits, use encrypted communication channels, and comply with GDPR, HIPAA, and other relevant regulations. All team members sign NDAs, and we can work within your security frameworks.
-              </p>
-            </div>
+            {[
+              {
+                q: "What technologies do you specialize in?",
+                a: "We specialize in React, TypeScript, Node.js, Python, AWS, Azure, GCP, and modern frameworks."
+              },
+              {
+                q: "How long does a typical project take?",
+                a: "Timelines vary by scope. Small apps take 4–8 weeks. Large systems take 3–6 months."
+              },
+              {
+                q: "Do you offer ongoing support?",
+                a: "Yes — 24/7 monitoring, updates, patches, and technical support plans are available."
+              },
+              {
+                q: "Can you work with our existing systems?",
+                a: "Absolutely. We integrate with legacy systems, APIs, and existing infrastructure."
+              },
+              {
+                q: "What is your development process?",
+                a: "Agile with iterative sprints, demos, reviews, and transparent communication."
+              },
+              {
+                q: "How do you ensure project security?",
+                a: "Security best practices, audits, encrypted channels, compliance, and NDAs for all team members."
+              }
+            ].map((item, i) => (
+              <div key={i} className="border border-blue-100 p-8 bg-white rounded-xl shadow-sm">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.q}</h3>
+                <p className="text-slate-600 leading-relaxed">{item.a}</p>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
 
-      {/* CTA Section - Expanded */}
-      <section className="py-20 sm:py-24 md:py-32 px-6 wp-section-light">
+      {/* ------------------------------ */}
+      {/* FINAL CTA */}
+      {/* ------------------------------ */}
+      <section className="py-20 px-6 bg-blue-50/30">
         <div className="max-w-7xl mx-auto">
-          {/* Main CTA Card */}
-          {/* Why Start Now Section */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why <span className="text-gradient">Start Now?</span>
-              </h3>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Every day you wait is an opportunity lost. Here's what you gain by partnering with us today
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="wp-card bg-white text-center">
-                <div className="wp-card-img">
-                  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="fast-time" />
-                </div>
-                <div className="p-8">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Fast Time to Market</h4>
-                  <p className="text-gray-600">
-                    Our agile approach and experienced team ensure your product reaches the market quickly, giving you a competitive advantage and faster ROI.
-                  </p>
-                </div>
-              </div>
-
-              <div className="wp-card bg-white text-center">
-                <div className="wp-card-img">
-                  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="scalable-growth" />
-                </div>
-                <div className="p-8">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Scalable Growth</h4>
-                  <p className="text-gray-600">
-                    Build on a foundation designed for growth. Our solutions scale seamlessly as your business expands, eliminating costly redesigns later.
-                  </p>
-                </div>
-              </div>
-
-              <div className="wp-card bg-white text-center">
-                <div className="wp-card-img">
-                  <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80" alt="risk-mitigation" />
-                </div>
-                <div className="p-8">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Risk Mitigation</h4>
-                  <p className="text-gray-600">
-                    Proven methodologies, comprehensive testing, and ongoing support minimize project risks and ensure successful delivery.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Get Started Process Section */}
-          <div>
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Simple <span className="text-gradient">3-Step Process</span>
-              </h3>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Getting started is easy. We've streamlined our onboarding to get you up and running quickly
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="relative">
-                <div className="wp-card p-8 bg-white h-full">
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    1
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4 mt-4">Discovery Call</h4>
-                  <p className="text-gray-600 mb-6">
-                    Schedule a free 30-minute consultation where we'll discuss your goals, challenges, and vision. No commitment required.
-                  </p>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-600 font-bold">✓</span>
-                      <span>Understand your requirements</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-600 font-bold">✓</span>
-                      <span>Assess technical feasibility</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-600 font-bold">✓</span>
-                      <span>Answer your questions</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="wp-card p-8 bg-white h-full">
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    2
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4 mt-4">Proposal & Planning</h4>
-                  <p className="text-gray-600 mb-6">
-                    Receive a detailed proposal with timeline, costs, and project roadmap. We'll refine it together until it's perfect.
-                  </p>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-600 font-bold">✓</span>
-                      <span>Detailed project scope</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-600 font-bold">✓</span>
-                      <span>Transparent pricing</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-600 font-bold">✓</span>
-                      <span>Clear milestones & deliverables</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="wp-card p-8 bg-white h-full">
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
-                    3
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4 mt-4">Kickoff & Delivery</h4>
-                  <p className="text-gray-600 mb-6">
-                    Once approved, we hit the ground running. You'll have regular updates, demos, and direct access to the team.
-                  </p>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-600 font-bold">✓</span>
-                      <span>Agile development sprints</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-600 font-bold">✓</span>
-                      <span>Weekly progress reviews</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary-600 font-bold">✓</span>
-                      <span>Continuous feedback loop</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-            <div className="text-center mb-12 mt-20">
-          <div className="wp-card p-16 text-center bg-gradient-to-br from-primary-50 to-white border-2 border-primary-200 mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Ready to Transform <br />
-              <span className="text-gradient">Your Business?</span>
-            </h2>
-            <p className="text-gray-600 text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help you achieve your goals with our innovative solutions and expert team
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why <span className="bg-gradient-to-r from-blue-600 to-blue-500 text-transparent bg-clip-text">Start Now?</span>
+            </h3>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Every day you wait is an opportunity lost. Start achieving results today.
             </p>
-            <button
-              className="px-12 py-5 wp-gradient-primary text-white font-bold text-lg hover:opacity-90 transition-all inline-flex items-center gap-3 shadow-lg"
-              onClick={() => setCurrentPage('contact')}
-            >
-              <span>Contact Us Today</span>
-              <ArrowRight size={20} />
-            </button>
           </div>
+
+          {/* Why Start Now Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+            {[
+              {
+                img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+                title: "Fast Time to Market",
+                desc: "Our agile team delivers quickly so you gain competitive advantage immediately."
+              },
+              {
+                img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+                title: "Scalable Growth",
+                desc: "Grow confidently with infrastructure designed to scale effortlessly."
+              },
+              {
+                img: "https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=80",
+                title: "Risk Mitigation",
+                desc: "Proven methodologies reduce risk and ensure successful delivery."
+              }
+            ].map((c, i) => (
+              <div key={i} className="border border-blue-100 bg-white rounded-xl shadow-sm">
+                <img src={c.img} className="rounded-t-xl w-full h-60 object-cover" />
+                <div className="p-8 text-center">
+                  <h4 className="text-xl font-bold text-slate-900 mb-3">{c.title}</h4>
+                  <p className="text-slate-600">{c.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
+
+          {/* 3 Step Process */}
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Simple <span className="bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text">3-Step Process</span>
+            </h3>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Getting started is easy — our team makes onboarding simple and smooth.
+            </p>
           </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+
+            {/* Step 1 */}
+            <div className="relative">
+              <div className="border border-blue-100 p-8 bg-white rounded-xl shadow-sm h-full">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  1
+                </div>
+                <h4 className="text-2xl font-bold text-slate-900 mb-4 mt-4">Discovery Call</h4>
+                <p className="text-slate-600 mb-6">
+                  Free 30-minute consultation to understand your goals and challenges.
+                </p>
+                <ul className="space-y-2 text-slate-600">
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">✓</span>Understand requirements</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">✓</span>Assess feasibility</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">✓</span>Answer your questions</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="relative">
+              <div className="border border-blue-100 p-8 bg-white rounded-xl shadow-sm h-full">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  2
+                </div>
+                <h4 className="text-2xl font-bold text-slate-900 mb-4 mt-4">Proposal & Planning</h4>
+                <p className="text-slate-600 mb-6">
+                  You get a detailed plan including timeline, cost, and roadmap.
+                </p>
+                <ul className="space-y-2 text-slate-600">
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">✓</span>Detailed scope</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">✓</span>Transparent pricing</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">✓</span>Clear deliverables</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative">
+              <div className="border border-blue-100 p-8 bg-white rounded-xl shadow-sm h-full">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  3
+                </div>
+                <h4 className="text-2xl font-bold text-slate-900 mb-4 mt-4">Kickoff & Delivery</h4>
+                <p className="text-slate-600 mb-6">
+                  Development begins with ongoing updates and review sessions.
+                </p>
+                <ul className="space-y-2 text-slate-600">
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">✓</span>Agile sprints</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">✓</span>Weekly reviews</li>
+                  <li className="flex gap-2"><span className="text-blue-600 font-bold">✓</span>Continuous feedback</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
+
+          {/* Final CTA */}
+          <div className="text-center">
+            <div className="border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-16 rounded-xl shadow-md">
+              <h2 className="text-5xl font-bold mb-6 text-slate-900">
+                Ready to Transform <br />
+                <span className="bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text">Your Business?</span>
+              </h2>
+
+              <p className="text-slate-600 text-xl mb-8 max-w-2xl mx-auto">
+                Let’s discuss how our team can help you reach your goals.
+              </p>
+
+              <button
+                className="px-12 py-5 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold text-lg rounded-xl shadow-md hover:opacity-90 flex items-center gap-3 mx-auto"
+                onClick={() => setCurrentPage('contact')}
+              >
+                <span>Contact Us Today</span>
+                <ArrowRight size={20} />
+              </button>
+            </div>
+          </div>
+
         </div>
       </section>
     </div>

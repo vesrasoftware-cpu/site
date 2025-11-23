@@ -11,7 +11,7 @@ function Footer({ setCurrentPage }: FooterProps) {
   };
 
   return (
-    <footer className="bg-gray-100 text-white border-t border-gray-800">
+    <footer className="bg-white text-white border-t border-white">
       <div className="max-w-7xl mx-auto px-12 py-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mb-20">
 
