@@ -31,6 +31,7 @@ function ServicesPage({ setCurrentPage }: ServicesPageProps) {
     { icon: LineChart, title: "Business Intelligence", img: "/bi.jpeg", description: "Data-driven insights and analytics to help you make informed business decisions.", features: ["Data Visualization", "Custom Dashboards", "Reporting Solutions"] },
     { icon: Blocks, title: "API Development", img: "/a.jpeg", description: "RESTful and GraphQL APIs that enable seamless integration and communication.", features: ["REST & GraphQL", "API Documentation", "Third-party Integrations"] },
     { icon: Rocket, title: "Digital Transformation", img: "/d.jpeg", description: "End-to-end digital transformation strategies to modernize your business operations.", features: ["Strategy Consulting", "Process Automation", "Change Management"] },
+    { icon: Globe, title: "Google Mapping & Digital Marketing", img: "/gd.jpeg", description: "Location-based marketing solutions and digital campaigns powered by Google Maps integration to drive local business growth.", features: ["Google Maps Integration", "Local SEO", "Digital Marketing Campaigns"] },
   ];
 
   return (
